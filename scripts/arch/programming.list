@@ -1,0 +1,15 @@
+Pip python-pip native
+Pipx python-pipx native
+NodeJS nodejs native
+Node_Package_Manager npm native
+Deno deno native
+Bun bun native
+Java_Development_Kit jdk native
+Go go native
+GCC gcc native
+Kotlin kotlin native
+Ruby ruby native
+Rust rust native
+Rustup rustup native
+Cargo cargo native
+Zig zig native

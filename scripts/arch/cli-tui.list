@@ -1,0 +1,17 @@
+BTop btop homebrew
+NVTop nvtop homebrew
+HTop htop homebrew
+NerdFonts_Installer nerdfonts-installer-bin native
+Pacseek pacseek native
+Theme.sh theme.sh native
+FZF fzf homebrew
+ZSH zsh native
+NuShell nushell native
+Fish fish native
+Harper harper homebrew
+Lazygit lazygit homebrew
+LazySQL lazysql homebrew
+Starship starship homebrew
+Spaceship spaceship homebrew
+Powerlevel10k powerlevel10k homebrew
+Superfile superfile homebrew

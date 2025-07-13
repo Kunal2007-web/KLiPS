@@ -1,0 +1,2 @@
+KLIPS_DIR=$(pwd)
+DISTRO=$(lsb_release -is)
