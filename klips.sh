@@ -9,7 +9,7 @@ detect_os_installation() {
 	case $DISTRO in
 		"Arch")
 			echo "Arch/Arch-Based Linux Distribution Detected!"
-			check_requirements "paru" "flatpak" "brew"
+			check_requirements "paru" "flatpak" "brew" "fzf"
 			cd $KLIPS_DIR/scripts/arch
 			sh archibald.sh
 			;;
@@ -70,7 +70,13 @@ check_requirements() {
 echo "Welcome to Kunal's Linux Post-installation Script (KLiPS)!"
 echo "Detecting Linux Distribution..."
 detect_os_installation
-cd scripts
+if [[ $? == 1 ]]; then
+	exit
+elif [[ $? == 2 ]]; then
+	rm $KLIPS_DIR/install.list
+	exit
+fi
+cd $KLIPS_DIR/scripts
 sh install-apps.sh ../install.list
 cd $KLIPS_DIR
 echo "Thank You for Using KLiPS!"

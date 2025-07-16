@@ -7,19 +7,6 @@ fi
 
 source ../klips_env
 
-INS_CMD=
-
-case $DISTRO in
-	"Arch")
-		INS_CMD="paru -S --noconfirm"
-		archibald
-		;;
-	*)
-		echo "Distribution Not Supported! Exiting..."
-		exit
-		;;
-esac
-
 archibald() {
 	SEL_LST="$(cat ../install.list)"
 	readarray -t PAC_LST < <(echo "$SEL_LST" | cut -d " " -f 2)
@@ -46,3 +33,15 @@ archibald() {
 
 }
 
+INS_CMD=
+
+case $DISTRO in
+	"Arch")
+		INS_CMD="paru -S"
+		archibald
+		;;
+	*)
+		echo "Distribution Not Supported! Exiting..."
+		exit
+		;;
+esac
