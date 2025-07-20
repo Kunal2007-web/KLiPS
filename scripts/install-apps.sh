@@ -25,16 +25,27 @@ archibald() {
 	done
 
 	printf "Installing Native Packages...\n"
-	$INS_CMD $NATIVE_LST
+	if [ -n "$NATIVE_LST" ]; then
+		$INS_CMD $NATIVE_LST
+	else
+		echo "No Native Packages Selected."
+	fi
 	printf "\nInstalling Flatpaks...\n"
-	flatpak install flathub $FLATPAK_LST
+	if [ -n "$FLATPAK_LST" ]; then
+		flatpak install flathub $FLATPAK_LST
+	else
+		echo "No Flatpak Packages Selected."
+	fi
 	printf "\nInstalling Homebrew Packages...\n"
-	brew install $HOMEBREW_LST
+	if [ -n "$HOMEBREW_LST" ]; then
+		brew install $HOMEBREW_LST
+	else
+		echo "No Homebrew Packages Selected."
+	fi
 
 }
 
 INS_CMD=
-
 case $DISTRO in
 	"Arch")
 		INS_CMD="paru -S"

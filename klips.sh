@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+# Check if requirements for the specific distribution are installed.
+check_requirements() {
+	echo "Checking Requirements..."
+	for i in "$@"; do
+		if ! [ "$(command -v "$i")" ]; then
+			echo "$i not installed. Install it and then run the script."
+			exit 1
+		fi
+	done
+}
+
+check_requirements "lsb_release"
+
 # ENV File
 source ./klips_env
 
@@ -55,17 +68,6 @@ choose_os() {
 	detect_os_installation
 }
 
-# Check if requirmeents for the specific distribution are installed.
-check_requirements() {
-	echo "Checking Requirements..."
-	for i in $@; do
-		if ! [ "$(command -v "$i")" ]; then
-			echo "$i not installed. Install it and then run the script."
-			exit 1
-		fi
-	done
-}
-
 # Execution
 echo "Welcome to Kunal's Linux Post-installation Script (KLiPS)!"
 echo "Detecting Linux Distribution..."
@@ -73,7 +75,7 @@ detect_os_installation
 if [[ $? == 1 ]]; then
 	exit
 elif [[ $? == 2 ]]; then
-	rm $KLIPS_DIR/install.list
+	rm "$KLIPS_DIR"/install.list
 	exit
 fi
 cd $KLIPS_DIR/scripts

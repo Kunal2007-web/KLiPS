@@ -3,9 +3,9 @@
 source ../../klips_env
 
 run_fzf() {
-    local file="$1"
-    local app_type="$2"
-    cat "$file" | fzf -e --delimiter=" " --multi --reverse --header="Choose $app_type to Install Using <Tab> Key and Confirm with <Enter> Key:" --header-border=bold >> ../../install.list
+    local FILE="$1"
+    local APP_TYPE="$2"
+    cat "$FILE" | fzf -e --delimiter=" " --multi --reverse --header="Choose $APP_TYPE to Install Using <Tab> Key and Confirm with <Enter> Key:" --header-border=bold >> ../../install.list
 }
 
 while true; do

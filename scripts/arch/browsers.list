@@ -7,6 +7,7 @@ SeaMonkey seamonkey-bin native
 Vivaldi vivaldi native
 Tor tor-browser-bin native
 Lynx lynx native
+W3M w3m native
 Amfora amfora homebrew
 Microsoft_Edge microsoft-edge-stable-bin native
 Zen zen-browser-bin native
