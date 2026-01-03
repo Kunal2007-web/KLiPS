@@ -14,7 +14,7 @@ check_requirements() {
 check_requirements "lsb_release"
 
 # ENV File
-source ./klips_env
+source ./klips.env
 
 # Functions
 # Checks OS

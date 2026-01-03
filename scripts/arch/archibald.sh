@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-source ../../klips_env
+source ../../klips.env
 
 run_fzf() {
     local FILE="$1"
     local APP_TYPE="$2"
-    cat "$FILE" | fzf -e --delimiter=" " --multi --reverse --header="Choose $APP_TYPE to Install Using <Tab> Key and Confirm with <Enter> Key:" --header-border=bold >> ../../install.list
+    \cat "$FILE" | fzf -e --delimiter=" " --multi --reverse --header="Choose $APP_TYPE to Install Using <Tab> Key and Confirm with <Enter> Key:" --header-border=bold >> ../../install.list
 }
 
 while true; do

@@ -5,7 +5,7 @@ if ! [[ -f "$1" && "${1##*.}" == "list" ]]; then
 	exit
 fi
 
-source ../klips_env
+source ../klips.env
 
 archibald() {
 	SEL_LST="$(cat ../install.list)"
