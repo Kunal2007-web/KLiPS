@@ -1,14 +1,14 @@
 Fragments fragments native
 Syncthing syncthingdesktop native
-Dev_Toolbox devtoolbox native
+Dev_Toolbox me.iepure.devtoolbox flatpak
 WebFont_Kit_Generator webfont-kit-generator native
 VMWare vmware-workstation native
 Virt_Manager virt-manager native
 VirtualBox virtualbox native
-Refine refine native
+Refine page.tesk.Refine flatpak
 Gnome_Tweaks gnome-tweaks native
 Gnome_Extension_Manager extension-manager native
-Flatseal flatseal native
+Flatseal com.github.tchx84.Flatseal flatpak
 DConf_Editor dconf-editor native
 File_Roller file-roller native
 QBitTorrent qbittorrent native

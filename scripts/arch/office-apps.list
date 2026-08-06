@@ -11,7 +11,7 @@ NB nb homebrew
 Joplin joplin-bin native
 Simplenote simplenote-electron-bin native
 Setzer setzer native
-LaTeX texlive-full native
+LaTeX texlive native
 Typst typst homebrew
 Pandoc pandoc-bin native
 AppFlowy appflowy-bin native
@@ -21,4 +21,4 @@ TeXStudio texstudio native
 TeXMaker texmaker native
 Typesetter typesetter native
 Foliate foliate native
-Wonderpen wonderpen-bin native
+Wonderpen com.tominlab.wonderpen flatpak
